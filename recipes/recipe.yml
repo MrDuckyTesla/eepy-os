@@ -6,7 +6,7 @@ name: eepy-os
 description: This is my personal OS image.
 
 # the base image to build on top of (FROM) and the version tag to use
-base-image: ghcr.io/secureblue/cosmic-main-hardened
+base-image: ghcr.io/secureblue/sericea-main-hardened
 image-version: latest # You can pin to a specific version of Fedora as well
 
 # module configuration, executed in order
@@ -18,8 +18,15 @@ modules:
         #destination: / # copies files/system/* (* means everything inside it) into your image's root folder /
 
   - type: dnf
+    repos:
+      copr:
+        swayfx/swayfx
     install:
       packages:
+        - swayfx
         - sshfs
+    remove:
+      packages:
+        - sway
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
