@@ -20,7 +20,8 @@ modules:
   - type: dnf
     repos:
       copr:
-        - name: swayfx/swayfx
+        - swayfx/swayfx
+
     install:
       packages:
         - swayfx
