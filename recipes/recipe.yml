@@ -27,6 +27,7 @@ modules:
       packages:
         - swayfx
         - sshfs
+        - sddm
         - rustup
         - java-latest-openjdk-devel
         - gcc
