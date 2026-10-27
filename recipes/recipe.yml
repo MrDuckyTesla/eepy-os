@@ -27,6 +27,7 @@ modules:
       packages:
         - swayfx
         - sshfs
+        - sddm
     remove:
       packages:
         - sway
