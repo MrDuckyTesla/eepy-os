@@ -30,6 +30,7 @@ modules:
     remove:
       packages:
         - sway
+
   - from-file: common.yml
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
